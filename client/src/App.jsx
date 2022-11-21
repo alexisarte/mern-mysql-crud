@@ -3,13 +3,17 @@ import TasksPage from './pages/TasksPage';
 import TasksForm from './pages/TasksForm';
 import NotFound from './pages/NotFound';
 
+import NavBar from './components/NavBar';
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<TasksPage />} />
-      <Route path="/new" element={<TasksForm />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<TasksPage />} />
+        <Route path="/new" element={<TasksForm />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </>
   );
 }
 
